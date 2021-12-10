@@ -1,0 +1,50 @@
+//colors
+$primary: #134048;
+$secondary: #d6b500;
+$text-color: #f7f2df;
+$white: #ffffff;
+
+//fonts
+$font-primary: "Raleway", sans-serif;
+$font-secondary: Arial, sans-serif;
+
+//font size
+$fs-s: 12px;
+$fs-m: 14px;
+$fs-l: 16px;
+$fs-xl: 22px;
+
+//duration time
+$animation-duration-time: 0.3s;
+
+//letter spacing mixin
+@mixin letter-spacing($spacing) {
+  letter-spacing: calc($spacing / 1000) * 1em;
+}
+
+//screen size
+$screen-l: 1367px;
+$screen-m: 1024px;
+$screen-s: 768px;
+$screen-xs: 576px;
+
+:root {
+  //colors
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --white: #{$white};
+  --text-color: #{$text-color};
+
+  //fonts
+  --font-primary: #{$font-primary};
+  --font-secondary: #{$font-secondary};
+
+  //font size
+  --fs-s: #{$fs-s};
+  --fs-m: #{$fs-m};
+  --fs-l: #{$fs-l};
+  --fs-xl: #{$fs-xl};
+
+  //duration time
+  --duration-time: #{$animation-duration-time};
+}

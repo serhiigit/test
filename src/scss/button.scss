@@ -1,0 +1,26 @@
+.button-cta {
+  font-family: var(--font-primary);
+  font-size: var(--fs-l);
+  line-height: 1.125rem;
+  color: var(--text-color);
+  text-transform: uppercase;
+  text-decoration: none;
+
+  padding: 0.75rem 1rem 1rem;
+  border: 2px solid var(--secondary);
+
+  transition: background-color var(--duration-time) ease-in-out;
+  z-index: 2;
+  @include letter-spacing(50);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: $screen-s) {
+  .button-cta {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+  }
+}

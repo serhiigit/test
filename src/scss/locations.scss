@@ -1,0 +1,38 @@
+.locations {
+  padding: 164px 0;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: calc(50% + 1rem);
+    height: calc(100% - 120px);
+    background-color: #231e1f;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 5%;
+    z-index: 1;
+  }
+}
+
+@media (max-width: $screen-m) {
+  .locations {
+    padding: 120px 0;
+
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $screen-s) {
+  .locations {
+    padding: 64px 0;
+
+    &:before {
+      height: calc(100% - 32px);
+    }
+  }
+}
