@@ -181,18 +181,6 @@
   }
 }
 
-@media (min-width: $screen-m) {
-  .tabs__list-item.active [tabindex]:focus {
-    box-shadow: -1px 20px 15px -13px rgba(214, 181, 0, 0.29);
-    outline: none;
-  }
-
-  .tabs__list-item [tabindex]:focus {
-    box-shadow: -1px 20px 15px -13px rgba(19, 64, 72, 0.29);
-    outline: none;
-  }
-}
-
 @media (max-width: $screen-m) {
   .tabs {
     background-color: var(--white);
@@ -276,7 +264,7 @@
       padding: 2rem 1rem;
 
       position: absolute;
-      transform: translateY(-100%);
+      transform: translateY(-150%);
       z-index: 0;
       height: 0;
       transition: transform var(--duration-time) ease-in-out,
@@ -310,6 +298,14 @@
   }
 }
 
+@media screen and (max-width: $screen-m) {
+  .tabs {
+    .tabs__title-wrap {
+      outline: none;
+    }
+  }
+}
+
 @keyframes move_line {
   from {
     width: 0;
@@ -325,5 +321,19 @@
   }
   to {
     background-position: 100%;
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fade-in 2s linear;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
